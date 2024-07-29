@@ -22,8 +22,8 @@ Currency Tracker is a web application that tracks the top 100 cryptocurrencies, 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/currency-tracker.git
-   cd currency-tracker
+   git clone https://github.com/rahul22kar/currency-tracker.git
+   cd currency-tracker  
    ```
 
 2. Install the dependencies:

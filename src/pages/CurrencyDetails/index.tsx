@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import { Line } from "@ant-design/plots";
 
 import FavouriteStar from "components/FavouriteStar";
-import useFetchCurrencyDetails from "hooks/useFetchCurrencyDetails";
-import { formatPrice } from "utils/text";
-
-import styles from "./index.module.scss";
 import ErrorComponent from "components/ErrorComponent";
+import useFetchCurrencyDetails from "hooks/useFetchCurrencyDetails";
+
+import { formatPrice } from "utils/text";
+import styles from "./index.module.scss";
 
 const CurrencyDetails = () => {
   const params = useParams();

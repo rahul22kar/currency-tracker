@@ -3,12 +3,12 @@ import type { TableColumnsType } from "antd";
 import { Link } from "react-router-dom";
 
 import FavouriteStar from "components/FavouriteStar";
+import ErrorComponent from "components/ErrorComponent";
 import useFetchCurrency from "hooks/useFetchCurrency";
 import { CurrencyTableData } from "utils/types";
 import { formatPrice } from "utils/text";
 
 import styles from "./index.module.scss";
-import ErrorComponent from "components/ErrorComponent";
 
 const CurrencyListing = () => {
   const { allCurrencyData, loading, error, retry, toggleFavourite } =
