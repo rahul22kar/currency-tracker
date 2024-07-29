@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { ConfigProvider, theme } from "antd";
+
+import CurrencyDetails from "pages/CurrencyDetails";
+import CurrencyListing from "pages/CurrencyListing";
+
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+        <div className={styles["container"]}>
+          <div className={styles["header"]}>
+            <Link to={"/"} className={styles["title"]}>
+              Currency Tracker
+            </Link>
+          </div>
+          <div className={styles["page"]}>
+            <Routes>
+              <Route path="/" element={<CurrencyListing />} />
+              <Route path="/details/:assetId" element={<CurrencyDetails />} />
+            </Routes>
+          </div>
+        </div>
+      </ConfigProvider>
+    </BrowserRouter>
   );
 }
 
